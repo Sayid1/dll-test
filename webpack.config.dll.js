@@ -11,14 +11,14 @@ module.exports = {
     vender: dependencies
   },
   output: {
-    path: path.join(__dirname, 'dll'),
+    path: path.join(__dirname, 'dist', 'dll'),
     filename: 'dll.[name]_[hash].js',
     library: '[name]_[hash]'
   },
   plugins: [
     new webpack.DllPlugin({
       name: '[name]_[hash]',
-      path: path.join(__dirname, 'dll', 'manifest.json')
+      path: path.join(__dirname, 'dist/dll', 'manifest.json')
     }),
     new AssetsPlugin({
       filename: 'bundle-config.json',

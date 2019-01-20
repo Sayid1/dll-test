@@ -6,7 +6,7 @@ module.exports = {
   configureWebpack: {
     plugins: [
       new webpack.DllReferencePlugin({
-        manifest: require('./dll/manifest.json')
+        manifest: require('./dist/dll/manifest.json')
       }),
       new HtmlWebpackPlugin({
         inject: true,
